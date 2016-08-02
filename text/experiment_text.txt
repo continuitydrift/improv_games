@@ -1,0 +1,26 @@
+NOTES FOR IMPROV SITE
+
+Navigation menu (main)
+1. home
+2.Buy book
+3.Other resources
+
+DROP DOWN MENUS (Filtering)
+
+SHOW:
++By difficulty
+-easy
+-medium
+-difficult
+
++By number players
+-two
+-two to six
+-ensemble
+
++By type
+-warm-up
+-physical
+-verbal
+-acting
+-long form
