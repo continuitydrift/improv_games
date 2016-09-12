@@ -1,4 +1,4 @@
-@import url("https://npmcdn.com/basscss@8.0.1/css/basscss.min.css")
+@import url("https://unpkg.com/basscss@8.0.1/css/basscss.min.css")
 
 body {
   background-color: rgb(230, 230, 230);
