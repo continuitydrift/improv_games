@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Improv Games for Teachers</title>
+    <meta title="author" content="Chad Hines">
+    <!--aka continuity drift-->
+    <meta name="viewport" content ="width=device-width, initial-scale=1">
+    <meta keywords="improv, games, teachers, exercises, warm up">
+<!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!--bootstrap and font awesome-->
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+    <!--JS-->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--my style sheet-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--goiong to try basscss-->
+    <link href="https://npmcdn.com/basscss@8.0.1/css/basscss.min.css" rel="stylesheet">
+    <link href="https://npmcdn.com/basscss-responsive-margin@1.1.0/css/responsive-margin.css" rel="stylesheet">
+
+    <!--text JSON file-->
+    <script type="text/javascript" src="test.json"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDRoqi4idfpmAFZ51O9_LJRF7Grz9CpqWk",
+        authDomain: "improv-games-for-teachers.firebaseapp.com",
+        databaseURL: "https://improv-games-for-teachers.firebaseio.com",
+        storageBucket: "improv-games-for-teachers.appspot.com",
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <link href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" rel="stylesheet">
+    <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+  </head>
+  <!--
+
+ _               _
+| |             | |
+| |__   ___   __| |_   _
+| '_ \ / _ \ / _` | | | |
+| |_) | (_) | (_| | |_| |
+|_.__/ \___/ \__,_|\__, |
+                    __/ |
+                   |___/
+-->
+  <body>
+    <div class="row nav-row">
+    <nav class="navbar navbar-dark bg-inverse">
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class= "nav-item">
+          <a class= "nav-link" href="#">Buy Book</a>
+        </li>
+        <li class = "nav-item">
+          <a class= "nav-link" href="#">Support Project</a>
+        </li>
+        <li "nav-item">
+          <a class= "nav-link" href="#">Other Resources</a>
+        </li>
+
+      <!--search bar-->
+      <li>
+        <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+        </form>
+      </li>
+
+    </nav>
+  </div>
+    <!--end of bootstrap part-->
+    <!--
+
+ _                    _
+| |                  | |
+| |__   ___  __ _  __| | ___ _ __
+| '_ \ / _ \/ _` |/ _` |/ _ \ '__|
+| | | |  __/ (_| | (_| |  __/ |
+|_| |_|\___|\__,_|\__,_|\___|_|
+
+
+-->
+
+
+    <div id="wrapper" class= "clearfix fit mx-auto">
+    <header class= "clearfix fit">
+
+    </header>
+
+      <div id="stage" class="clearfix fit">
+        <div class="panel m2 col-11 mx-auto" style="background-color: white; padding: 6px;">
+          <div id="title" class ="centered">
+            <h1 >Yes, And...</h1>
+            <h2>Improv Games for Teachers</h2>
+          </div>
+<!-- read more example jquery
+
+            <div class="item">
+
+                This is the first part of the text, the part that will be seen originally.<br/>
+                <a href="#" class="read_more">Read More</a><br/>
+
+                <span class="more_text" style="display: none">
+                    This is the extra text, that will be shown after pressing the link above.
+                </span>
+
+            </div>
+
+-->
+
+
+          <div class="row container-fluid">
+            <div class="col-10 border m1 mx-auto">
+
+<table id="example" class="display" width="100%"></table>
+
+
+</div>
+<!--
+              <table id="example" class="display" cellspacing="1" width="100%">
+                      <thead>
+                          <tr>
+                              <th>Name</th>
+                              <th>Position</th>
+                              <th>Office</th>
+                              <th>Age</th>
+                              <th>Start date</th>
+                              <th>Salary</th>
+                          </tr>
+                      </thead>
+                      <tfoot>
+                          <tr>
+                              <th>Name</th>
+                              <th>Position</th>
+                              <th>Office</th>
+                              <th>Age</th>
+                              <th>Start date</th>
+                              <th>Salary</th>
+                          </tr>
+                      </tfoot>
+                      <tbody>
+                          <tr>
+                              <td><a href="#">Tiger Nixon</a></td>
+                              <td>System Architect</td>
+                              <td>Edinburgh</td>
+                              <td>61</td>
+                              <td>2011/04/25</td>
+                              <td>$320,800</td>
+                          </tr>
+                          <tr>
+                              <td>Garrett Winters</td>
+                              <td>Accountant</td>
+                              <td>Tokyo</td>
+                              <td>63</td>
+                              <td>2011/07/25</td>
+                              <td>$170,750</td>
+                          </tr>
+                          <tr>
+                              <td>Ashton Cox</td>
+                              <td>Junior Technical Author</td>
+                              <td>San Francisco</td>
+                              <td>66</td>
+                              <td>2009/01/12</td>
+                              <td>$86,000</td>
+                          </tr>
+                          <tr>
+                              <td>Cedric Kelly</td>
+                              <td>Senior Javascript Developer</td>
+                              <td>Edinburgh</td>
+                              <td>22</td>
+                              <td>2012/03/29</td>
+                              <td>$433,060</td>
+                          </tr>
+                          <tr>
+                              <td>Airi Satou</td>
+                              <td>Accountant</td>
+                              <td>Tokyo</td>
+                              <td>33</td>
+                              <td>2008/11/28</td>
+                              <td>$162,700</td>
+                          </tr>
+                          <tr>
+                              <td>Brielle Williamson</td>
+                              <td>Integration Specialist</td>
+                              <td>New York</td>
+                              <td>61</td>
+                              <td>2012/12/02</td>
+                              <td>$372,000</td>
+                          </tr>
+                          <tr>
+                              <td>Herrod Chandler</td>
+                              <td>Sales Assistant</td>
+                              <td>San Francisco</td>
+                              <td>59</td>
+                              <td>2012/08/06</td>
+                              <td>$137,500</td>
+                          </tr>
+                          <tr>
+                              <td>Rhona Davidson</td>
+                              <td>Integration Specialist</td>
+                              <td>Tokyo</td>
+                              <td>55</td>
+                              <td>2010/10/14</td>
+                              <td>$327,900</td>
+                          </tr>
+                          <tr>
+                              <td>Colleen Hurst</td>
+                              <td>Javascript Developer</td>
+                              <td>San Francisco</td>
+                              <td>39</td>
+                              <td>2009/09/15</td>
+                              <td>$205,500</td>
+                          </tr>
+                          <tr>
+                              <td>Sonya Frost</td>
+                              <td>Software Engineer</td>
+                              <td>Edinburgh</td>
+                              <td>23</td>
+                              <td>2008/12/13</td>
+                              <td>$103,600</td>
+                          </tr>
+                          <tr>
+                              <td>Jena Gaines</td>
+                              <td>Office Manager</td>
+                              <td>London</td>
+                              <td>30</td>
+                              <td>2008/12/19</td>
+                              <td>$90,560</td>
+                          </tr>
+                          <tr>
+                              <td>Quinn Flynn</td>
+                              <td>Support Lead</td>
+                              <td>Edinburgh</td>
+                              <td>22</td>
+                              <td>2013/03/03</td>
+                              <td>$342,000</td>
+                          </tr>
+                          <tr>
+                              <td>Charde Marshall</td>
+                              <td>Regional Director</td>
+                              <td>San Francisco</td>
+                              <td>36</td>
+                              <td>2008/10/16</td>
+                              <td>$470,600</td>
+                          </tr>
+                          <tr>
+                              <td>Haley Kennedy</td>
+                              <td>Senior Marketing Designer</td>
+                              <td>London</td>
+                              <td>43</td>
+                              <td>2012/12/18</td>
+                              <td>$313,500</td>
+                          </tr>
+                          <tr>
+                              <td>Tatyana Fitzpatrick</td>
+                              <td>Regional Director</td>
+                              <td>London</td>
+                              <td>19</td>
+                              <td>2010/03/17</td>
+                              <td>$385,750</td>
+                          </tr>
+                          <tr>
+                              <td>Michael Silva</td>
+                              <td>Marketing Designer</td>
+                              <td>London</td>
+                              <td>66</td>
+                              <td>2012/11/27</td>
+                              <td>$198,500</td>
+                          </tr>
+                          <tr>
+                              <td>Paul Byrd</td>
+                              <td>Chief Financial Officer (CFO)</td>
+                              <td>New York</td>
+                              <td>64</td>
+                              <td>2010/06/09</td>
+                              <td>$725,000</td>
+                          </tr>
+                          <tr>
+                              <td>Gloria Little</td>
+                              <td>Systems Administrator</td>
+                              <td>New York</td>
+                              <td>59</td>
+                              <td>2009/04/10</td>
+                              <td>$237,500</td>
+                          </tr>
+                          <tr>
+                              <td>Bradley Greer</td>
+                              <td>Software Engineer</td>
+                              <td>London</td>
+                              <td>41</td>
+                              <td>2012/10/13</td>
+                              <td>$132,000</td>
+                          </tr>
+                          <tr>
+                              <td>Dai Rios</td>
+                              <td>Personnel Lead</td>
+                              <td>Edinburgh</td>
+                              <td>35</td>
+                              <td>2012/09/26</td>
+                              <td>$217,500</td>
+                          </tr>
+                          <tr>
+                              <td>Jenette Caldwell</td>
+                              <td>Development Lead</td>
+                              <td>New York</td>
+                              <td>30</td>
+                              <td>2011/09/03</td>
+                              <td>$345,000</td>
+                          </tr>
+                          <tr>
+                              <td>Yuri Berry</td>
+                              <td>Chief Marketing Officer (CMO)</td>
+                              <td>New York</td>
+                              <td>40</td>
+                              <td>2009/06/25</td>
+                              <td>$675,000</td>
+                          </tr>
+                          <tr>
+                              <td>Caesar Vance</td>
+                              <td>Pre-Sales Support</td>
+                              <td>New York</td>
+                              <td>21</td>
+                              <td>2011/12/12</td>
+                              <td>$106,450</td>
+                          </tr>
+                          <tr>
+                              <td>Doris Wilder</td>
+                              <td>Sales Assistant</td>
+                              <td>Sidney</td>
+                              <td>23</td>
+                              <td>2010/09/20</td>
+                              <td>$85,600</td>
+                          </tr>
+                          <tr>
+                              <td>Angelica Ramos</td>
+                              <td>Chief Executive Officer (CEO)</td>
+                              <td>London</td>
+                              <td>47</td>
+                              <td>2009/10/09</td>
+                              <td>$1,200,000</td>
+                          </tr>
+                          <tr>
+                              <td>Gavin Joyce</td>
+                              <td>Developer</td>
+                              <td>Edinburgh</td>
+                              <td>42</td>
+                              <td>2010/12/22</td>
+                              <td>$92,575</td>
+                          </tr>
+                          <tr>
+                              <td>Jennifer Chang</td>
+                              <td>Regional Director</td>
+                              <td>Singapore</td>
+                              <td>28</td>
+                              <td>2010/11/14</td>
+                              <td>$357,650</td>
+                          </tr>
+                          <tr>
+                              <td>Brenden Wagner</td>
+                              <td>Software Engineer</td>
+                              <td>San Francisco</td>
+                              <td>28</td>
+                              <td>2011/06/07</td>
+                              <td>$206,850</td>
+                          </tr>
+                          <tr>
+                              <td>Fiona Green</td>
+                              <td>Chief Operating Officer (COO)</td>
+                              <td>San Francisco</td>
+                              <td>48</td>
+                              <td>2010/03/11</td>
+                              <td>$850,000</td>
+                          </tr>
+                          <tr>
+                              <td>Shou Itou</td>
+                              <td>Regional Marketing</td>
+                              <td>Tokyo</td>
+                              <td>20</td>
+                              <td>2011/08/14</td>
+                              <td>$163,000</td>
+                          </tr>
+                          <tr>
+                              <td>Michelle House</td>
+                              <td>Integration Specialist</td>
+                              <td>Sidney</td>
+                              <td>37</td>
+                              <td>2011/06/02</td>
+                              <td>$95,400</td>
+                          </tr>
+                          <tr>
+                              <td>Suki Burks</td>
+                              <td>Developer</td>
+                              <td>London</td>
+                              <td>53</td>
+                              <td>2009/10/22</td>
+                              <td>$114,500</td>
+                          </tr>
+                          <tr>
+                              <td>Prescott Bartlett</td>
+                              <td>Technical Author</td>
+                              <td>London</td>
+                              <td>27</td>
+                              <td>2011/05/07</td>
+                              <td>$145,000</td>
+                          </tr>
+                          <tr>
+                              <td>Gavin Cortez</td>
+                              <td>Team Leader</td>
+                              <td>San Francisco</td>
+                              <td>22</td>
+                              <td>2008/10/26</td>
+                              <td>$235,500</td>
+                          </tr>
+                          <tr>
+                              <td>Martena Mccray</td>
+                              <td>Post-Sales support</td>
+                              <td>Edinburgh</td>
+                              <td>46</td>
+                              <td>2011/03/09</td>
+                              <td>$324,050</td>
+                          </tr>
+                          <tr>
+                              <td>Unity Butler</td>
+                              <td>Marketing Designer</td>
+                              <td>San Francisco</td>
+                              <td>47</td>
+                              <td>2009/12/09</td>
+                              <td>$85,675</td>
+                          </tr>
+                          <tr>
+                              <td>Howard Hatfield</td>
+                              <td>Office Manager</td>
+                              <td>San Francisco</td>
+                              <td>51</td>
+                              <td>2008/12/16</td>
+                              <td>$164,500</td>
+                          </tr>
+                          <tr>
+                              <td>Hope Fuentes</td>
+                              <td>Secretary</td>
+                              <td>San Francisco</td>
+                              <td>41</td>
+                              <td>2010/02/12</td>
+                              <td>$109,850</td>
+                          </tr>
+                          <tr>
+                              <td>Vivian Harrell</td>
+                              <td>Financial Controller</td>
+                              <td>San Francisco</td>
+                              <td>62</td>
+                              <td>2009/02/14</td>
+                              <td>$452,500</td>
+                          </tr>
+                          <tr>
+                              <td>Timothy Mooney</td>
+                              <td>Office Manager</td>
+                              <td>London</td>
+                              <td>37</td>
+                              <td>2008/12/11</td>
+                              <td>$136,200</td>
+                          </tr>
+                          <tr>
+                              <td>Jackson Bradshaw</td>
+                              <td>Director</td>
+                              <td>New York</td>
+                              <td>65</td>
+                              <td>2008/09/26</td>
+                              <td>$645,750</td>
+                          </tr>
+                          <tr>
+                              <td>Olivia Liang</td>
+                              <td>Support Engineer</td>
+                              <td>Singapore</td>
+                              <td>64</td>
+                              <td>2011/02/03</td>
+                              <td>$234,500</td>
+                          </tr>
+                          <tr>
+                              <td>Bruno Nash</td>
+                              <td>Software Engineer</td>
+                              <td>London</td>
+                              <td>38</td>
+                              <td>2011/05/03</td>
+                              <td>$163,500</td>
+                          </tr>
+                          <tr>
+                              <td>Sakura Yamamoto</td>
+                              <td>Support Engineer</td>
+                              <td>Tokyo</td>
+                              <td>37</td>
+                              <td>2009/08/19</td>
+                              <td>$139,575</td>
+                          </tr>
+                          <tr>
+                              <td>Thor Walton</td>
+                              <td>Developer</td>
+                              <td>New York</td>
+                              <td>61</td>
+                              <td>2013/08/11</td>
+                              <td>$98,540</td>
+                          </tr>
+                          <tr>
+                              <td>Finn Camacho</td>
+                              <td>Support Engineer</td>
+                              <td>San Francisco</td>
+                              <td>47</td>
+                              <td>2009/07/07</td>
+                              <td>$87,500</td>
+                          </tr>
+                          <tr>
+                              <td>Serge Baldwin</td>
+                              <td>Data Coordinator</td>
+                              <td>Singapore</td>
+                              <td>64</td>
+                              <td>2012/04/09</td>
+                              <td>$138,575</td>
+                          </tr>
+                          <tr>
+                              <td>Zenaida Frank</td>
+                              <td>Software Engineer</td>
+                              <td>New York</td>
+                              <td>63</td>
+                              <td>2010/01/04</td>
+                              <td>$125,250</td>
+                          </tr>
+                          <tr>
+                              <td>Zorita Serrano</td>
+                              <td>Software Engineer</td>
+                              <td>San Francisco</td>
+                              <td>56</td>
+                              <td>2012/06/01</td>
+                              <td>$115,000</td>
+                          </tr>
+                          <tr>
+                              <td>Jennifer Acosta</td>
+                              <td>Junior Javascript Developer</td>
+                              <td>Edinburgh</td>
+                              <td>43</td>
+                              <td>2013/02/01</td>
+                              <td>$75,650</td>
+                          </tr>
+                          <tr>
+                              <td>Cara Stevens</td>
+                              <td>Sales Assistant</td>
+                              <td>New York</td>
+                              <td>46</td>
+                              <td>2011/12/06</td>
+                              <td>$145,600</td>
+                          </tr>
+                          <tr>
+                              <td>Hermione Butler</td>
+                              <td>Regional Director</td>
+                              <td>London</td>
+                              <td>47</td>
+                              <td>2011/03/21</td>
+                              <td>$356,250</td>
+                          </tr>
+                          <tr>
+                              <td>Lael Greer</td>
+                              <td>Systems Administrator</td>
+                              <td>London</td>
+                              <td>21</td>
+                              <td>2009/02/27</td>
+                              <td>$103,500</td>
+                          </tr>
+                          <tr>
+                              <td>Jonas Alexander</td>
+                              <td>Developer</td>
+                              <td>San Francisco</td>
+                              <td>30</td>
+                              <td>2010/07/14</td>
+                              <td>$86,500</td>
+                          </tr>
+                          <tr>
+                              <td>Shad Decker</td>
+                              <td>Regional Director</td>
+                              <td>Edinburgh</td>
+                              <td>51</td>
+                              <td>2008/11/13</td>
+                              <td>$183,000</td>
+                          </tr>
+                          <tr>
+                              <td>Michael Bruce</td>
+                              <td>Javascript Developer</td>
+                              <td>Singapore</td>
+                              <td>29</td>
+                              <td>2011/06/27</td>
+                              <td>$183,000</td>
+                          </tr>
+                          <tr>
+                              <td>Donna Snider</td>
+                              <td>Customer Support</td>
+                              <td>New York</td>
+                              <td>27</td>
+                              <td>2011/01/25</td>
+                              <td>$112,000</td>
+                          </tr>
+                      </tbody>
+                  </table>
+
+              <!-- test table -->
+              <div class="table table-light border">
+                <thead>
+                <tr>
+                  <td class="border"><b>name</b>
+                  </td>
+                  <td class="border"><b>type</b>
+                  </td>
+                  <td class="border"><b>difficulty</b>
+                  </td>
+                </tr>
+              </thead>
+            </tbody>
+                <tr>
+                  <td><b>add-on</b>
+                  </td>
+                  <td><b>general</b>
+                  </td>
+                  <td><b>all</b>
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>backdrop</b>
+                  </td>
+                  <td><b>acting</b>
+                  </td>
+                  <td><b>medium</b>
+                  </td>
+                </tr>
+              </div>
+            </div>
+          </div>
+          <article>
+            <h2>Bonus Scenes</h2>
+
+            <h3>improv stage: backdrop</h3>
+            <p>One of the games on the website (I feel at complete liberty to change the names and "rules" of these games, <!--since this files make no claims on any but naturally demonstrated authority)-->since this list is meant as on incomplete and inconclusive contribution to a larger, sustained chorus from the crowd) is <a href="#backdrop">backdrop</a>, where players take turns adding elements to the imaginary setting on the stage. "Here we see a large window with a cracked upper left pane, looking out over a seaside," one actor might say, pointing to the space. Another might indicate elsewhere and follow with, "there is a table with a collection of poems by Wallace Stevens, with two glasses, one empty, and one full of ice." Specifics, in writing and improv, carry more power than generalities to evoke images and associations. When the stage is sufficiently set, the player can begin the scene.
+            </p>
+            <p>On the date of my first serious drafting session, august 7th, I am standing on wooden planks on top of a shipping container in Ft. Scott, KS. Below me sunflowers flank a small farm house with stones piled up against the side, a frisbee of fossils on the porch railing. My brother is mowing next to the goat pen. Here you can see a black cherry tree, and over there is the hammock I slept in last night. It is cool, and still smells like the morning's rain. Other players might run onto the stage at this point, if this were the backdrop game, and start imitating all of the birds I heard on waking up, bob whites and crows and maybe larks. The rules of all these games are intended to be broken, to be added to or varied.</p>
+            <p>Another game I've found to be popular and easy to understand is <a href="flashback_flashforward">flashback, flashforward</a> which is similar to the <a href ="#fasforward_rewind">fastforward, rewind</a>game, but on a larger scale. </p>
+            <p>Let's say we added the flashback, flashforward game to the backdrop exercise, so once I was established as typing this on the roof, another (mephorical, since this is the one player version of the writing game) player might jump onto the stage and shout "one year ago" and then another scene would start, with me in the Andean mountains, playing improv games with children. When you imagine these games, you can use these settings as backdrops, or make use of whatever vivid mind-scapes you have close at hand. In mine, there is an octagonal "salon de yoga", with a sloping cane roof, dried bits of it always blowing down to where the sheep were sometimes, grazing, tied. I know the farm and school house well, because I would send the kids out into them, to do surveys of spiders and worms, or bring back something purple or something soft. My eyes scanned the view so many times trying to spy the answer to 20 questions.
+            </p>
+            <p>More about the Kuska school later. For now let's have another actor run across this narrative stage and say "fifteen years before that" (for younger actors, calculating the differences in years can be a good math exercise) and then two players would take the empty stage. This is how most improv scenes begin, with no established backdrops, just the bodies of the actors in an indifferentiated space. "How is the teacher from America?" one of them asks. "Fine! We've started the theater group. I heard he is doing well." "Really?" The other woman says. "At our school, I heard he is not so good."</p>
+
+            <p>For the website, I want the descriptions to be easy to read, even for those whose first language may not be english. While the construction of this online resource is being "live streamed" a different protocol can come into play. Text can fade in and out of comment sections, drop into more and more buried source files, and then eventually disappear for an edited, formatted, and for-sale re-emergenge. The information in the main table will be kept as open as I found it.
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+          </article>
+<pre>
+
+
+          This file, this website, is the stage where I will be performing for a while. There is energy produced when a tempo is established between performers and audience, interchangeable as those groups may be. The thing that I am realizing about web design, probably about any kind of work in the current technologized state of the post-industrialized world, is that there is a built in theatricality. There is a file online, a repository, and when I make changes the time is stamped on the newer version.
+
+          Regardless of where the table data is grabbed from, it will be a visible contribution, like someone shouting from off stage. Files are searchable.
+</pre>
+<div class="container-fluid">
+  <div class="col-md-9 border table mx-auto">
+          <tr>
+            <th><b>chapter</b></th>
+            <th><b>keywords</b></th>
+            <th><b>drafted</b></th>
+            <th><b>revised</b></th>
+            <th><b>proofread</b></th>
+            <!--I wonder how to set the type of value for the field cols i.e. varchar(10)-->
+          </tr>
+        </div>
+          <pre>
+
+          use what is there
+          IB
+
+          IC
+          game
+          IIA
+          IIB
+          IIC
+          game
+          IIIA
+          </pre>
+
+          </p>
+          <h3></h3>
+        </div>
+        <div class="clearfix fit row">
+          <div class="col-2 mx-auto">
+            <button type="button" class="btn btn-big chevron-right">Show all the games!</button>
+
+          </div>
+          <!--end button column-->
+
+        </div>
+        <!--end row-->
+        <div class= "row mx-auto" id="filterRow">
+          <div class="col col-6 border">
+            <!--dropdown menu-->
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+              </ul>
+            </div>
+            <!--
+            <div class="dropdown mx-auto">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Filter by
+                <span class="caret"></span>
+              </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+
+            </div>-->
+        <!--end dropdown-->
+        </div>
+        <div class="col col-6 px1 border">  <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Filter by
+              <span class="caret"></span>
+            </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+          </div>
+            <!--end stage-->
+        </div>
+
+        <div id="content">
+          <div class="clearfix border">
+            <div class="col col-11 border mx-auto">
+              <div class= "row clearfix fit justify">
+                <div class-"col col-3 border">
+                </div>
+                <div class-"col col-2 border">
+                </div>
+                <div class-"col col-2 border">
+                </div>
+                <div class-"col col-2 border">
+                </div>
+                <div class-"col col-2 border">
+                </div>
+                <!-- ends row -->
+              </div>
+                <div class= "row clearfix fit">
+                  <div class-"col col-2 border">
+                  </div>
+                  <div class-"col col-2 border">
+                  </div>
+                  <div class-"col col-2 border">
+                  </div>
+                  <div class-"col col-2 border">
+                  </div>
+                  <div class-"col col-2 border">
+                  </div>
+                  <!-- ends row -->
+                </div>
+                  <div class= "row clearfix fit">
+                    <div class-"col col-2 border">
+                    </div>
+                    <div class-"col col-2 border">
+                    </div>
+                    <div class-"col col-2 border">
+                    </div>
+                    <div class-"col col-2 border">
+                    </div>
+                    <div class-"col col-2 border">
+                    </div>
+                    <!-- ends row -->
+              </div>
+
+
+            </div>
+            </div>
+            <div class="col col-2 border">
+              <ul class="vertList">
+                <li><b>types/tags</b></li>
+                <li>pysical</li>
+                <li>verbal</li>
+                <li>warm-up</li>
+                <li>ensemble</li>
+                <li>bar</li>
+                <li>foo</li>
+                <li>bar</li>
+                <li>foo</li>
+                <li>bar</li>
+                <li>foo</li>
+                <li>bar</li>
+                <li>foo</li>
+                <li>bar</li>
+                <li>foo</li>
+                <li>bar</li>
+                <li>foo</li>
+                <li>bar</li>
+                <li>foo</li>
+                <li>bar</li>
+            </div>
+            </div>
+        </div>
+
+
+      </div>
+      <!--
+      <div id="other_resources" class="col-10 md mx-auto">
+    <!--end other resources div-->
+        <!-- <p>Web sites that are colored <span style= "color: green">green</span> are centered on improv games for children.</p> Sites listed as <span style= "color: blue">blue</span> are suitable for all levels of teaching. <span style="color: yellow">Yellow</span> sites are for middle or high school, and a <span style="color:red">red</span> color is for sites targeted more towards professional improvisers or theatrical troupes.</p>
+        <ul id="resource_list">
+          <li class="list-group-item list-group-item-success"><a href="http://animalearning.com/2012/08/29/fresh-start-10-improv-games-to-develop-courage-compassion-and-creativity/">Anima Blog's Spontaneity School</a></li>
+          <li class ="list-group-item list-group-item-info"><a href="">foo</a></li>
+          <li class ="list-group-item list-group-item-warning"><a href="">bar</a></li>
+          <li class ="list-group-item list-group-item-danger"><a href="">goo</a></li>
+        </ul>
+
+      </div> -->
+
+      </div>
+  </div>
+
+<!--
+        <button class="btn btn-default" id="add_text" onclick="testFunction()">click to import text</button>
+        <p>the new text will go here</p>
+        <p id="space"></p>
+        <h2>trying a jQuery button fuction</h2>
+          <button class="btn btn-default" id="add_text2" >add text with jQuery</button>
+        <h2>Now let's try using JSON!</h2>
+          <button class="btn btn-default" id="add_text3" >add data from a JSON file</button>
+      </div>
+    -->
+
+
+
+  <script type = "text/javascript">
+    function testFunction(){
+      var text="This is a sample text. What I want to happen is for this text to appear on the webpage when a user clicks the add_text button.";
+
+      console.log("the button was pushed.");
+      document.getElementById("space").innerHTML = text;
+    }
+      //document.getElementById("demo").innerHTML = "Paragraph changed!";
+
+      var dataSet = [
+          [ "Tiger Nixon", "System Architect", "Edinburgh", "5421", "2011/04/25", "$320,800" ],
+          [ "Garrett Winters", "Accountant", "Tokyo", "8422", "2011/07/25", "$170,750" ],
+          [ "Ashton Cox", "Junior Technical Author", "San Francisco", "1562", "2009/01/12", "$86,000" ],
+          [ "Cedric Kelly", "Senior Javascript Developer", "Edinburgh", "6224", "2012/03/29", "$433,060" ],
+          [ "Airi Satou", "Accountant", "Tokyo", "5407", "2008/11/28", "$162,700" ],
+          [ "Brielle Williamson", "Integration Specialist", "New York", "4804", "2012/12/02", "$372,000" ],
+          [ "Herrod Chandler", "Sales Assistant", "San Francisco", "9608", "2012/08/06", "$137,500" ],
+          [ "Rhona Davidson", "Integration Specialist", "Tokyo", "6200", "2010/10/14", "$327,900" ],
+          [ "Colleen Hurst", "Javascript Developer", "San Francisco", "2360", "2009/09/15", "$205,500" ],
+          [ "Sonya Frost", "Software Engineer", "Edinburgh", "1667", "2008/12/13", "$103,600" ],
+          [ "Jena Gaines", "Office Manager", "London", "3814", "2008/12/19", "$90,560" ],
+          [ "Quinn Flynn", "Support Lead", "Edinburgh", "9497", "2013/03/03", "$342,000" ],
+          [ "Charde Marshall", "Regional Director", "San Francisco", "6741", "2008/10/16", "$470,600" ],
+          [ "Haley Kennedy", "Senior Marketing Designer", "London", "3597", "2012/12/18", "$313,500" ],
+          [ "Tatyana Fitzpatrick", "Regional Director", "London", "1965", "2010/03/17", "$385,750" ],
+          [ "Michael Silva", "Marketing Designer", "London", "1581", "2012/11/27", "$198,500" ],
+          [ "Paul Byrd", "Chief Financial Officer (CFO)", "New York", "3059", "2010/06/09", "$725,000" ],
+          [ "Gloria Little", "Systems Administrator", "New York", "1721", "2009/04/10", "$237,500" ],
+          [ "Bradley Greer", "Software Engineer", "London", "2558", "2012/10/13", "$132,000" ],
+          [ "Dai Rios", "Personnel Lead", "Edinburgh", "2290", "2012/09/26", "$217,500" ],
+          [ "Jenette Caldwell", "Development Lead", "New York", "1937", "2011/09/03", "$345,000" ],
+          [ "Yuri Berry", "Chief Marketing Officer (CMO)", "New York", "6154", "2009/06/25", "$675,000" ],
+          [ "Caesar Vance", "Pre-Sales Support", "New York", "8330", "2011/12/12", "$106,450" ],
+          [ "Doris Wilder", "Sales Assistant", "Sidney", "3023", "2010/09/20", "$85,600" ],
+          [ "Angelica Ramos", "Chief Executive Officer (CEO)", "London", "5797", "2009/10/09", "$1,200,000" ],
+          [ "Gavin Joyce", "Developer", "Edinburgh", "8822", "2010/12/22", "$92,575" ],
+          [ "Jennifer Chang", "Regional Director", "Singapore", "9239", "2010/11/14", "$357,650" ],
+          [ "Brenden Wagner", "Software Engineer", "San Francisco", "1314", "2011/06/07", "$206,850" ],
+          [ "Fiona Green", "Chief Operating Officer (COO)", "San Francisco", "2947", "2010/03/11", "$850,000" ],
+          [ "Shou Itou", "Regional Marketing", "Tokyo", "8899", "2011/08/14", "$163,000" ],
+          [ "Michelle House", "Integration Specialist", "Sidney", "2769", "2011/06/02", "$95,400" ],
+          [ "Suki Burks", "Developer", "London", "6832", "2009/10/22", "$114,500" ],
+          [ "Prescott Bartlett", "Technical Author", "London", "3606", "2011/05/07", "$145,000" ],
+          [ "Gavin Cortez", "Team Leader", "San Francisco", "2860", "2008/10/26", "$235,500" ],
+          [ "Martena Mccray", "Post-Sales support", "Edinburgh", "8240", "2011/03/09", "$324,050" ],
+          [ "Unity Butler", "Marketing Designer", "San Francisco", "5384", "2009/12/09", "$85,675" ]
+      ];
+      $(document).ready(function(){
+
+        var dataSet = [
+            [ "Tiger Nixon", "System Architect", "Edinburgh", "5421", "2011/04/25", "$320,800" ],
+            [ "Garrett Winters", "Accountant", "Tokyo", "8422", "2011/07/25", "$170,750" ],
+            [ "Ashton Cox", "Junior Technical Author", "San Francisco", "1562", "2009/01/12", "$86,000" ],
+            [ "Cedric Kelly", "Senior Javascript Developer", "Edinburgh", "6224", "2012/03/29", "$433,060" ],
+            [ "Airi Satou", "Accountant", "Tokyo", "5407", "2008/11/28", "$162,700" ],
+            [ "Brielle Williamson", "Integration Specialist", "New York", "4804", "2012/12/02", "$372,000" ],
+            [ "Herrod Chandler", "Sales Assistant", "San Francisco", "9608", "2012/08/06", "$137,500" ],
+            [ "Rhona Davidson", "Integration Specialist", "Tokyo", "6200", "2010/10/14", "$327,900" ],
+            [ "Colleen Hurst", "Javascript Developer", "San Francisco", "2360", "2009/09/15", "$205,500" ],
+            [ "Sonya Frost", "Software Engineer", "Edinburgh", "1667", "2008/12/13", "$103,600" ],
+            [ "Jena Gaines", "Office Manager", "London", "3814", "2008/12/19", "$90,560" ],
+            [ "Quinn Flynn", "Support Lead", "Edinburgh", "9497", "2013/03/03", "$342,000" ],
+            [ "Charde Marshall", "Regional Director", "San Francisco", "6741", "2008/10/16", "$470,600" ],
+            [ "Haley Kennedy", "Senior Marketing Designer", "London", "3597", "2012/12/18", "$313,500" ],
+            [ "Tatyana Fitzpatrick", "Regional Director", "London", "1965", "2010/03/17", "$385,750" ],
+            [ "Michael Silva", "Marketing Designer", "London", "1581", "2012/11/27", "$198,500" ],
+            [ "Paul Byrd", "Chief Financial Officer (CFO)", "New York", "3059", "2010/06/09", "$725,000" ],
+            [ "Gloria Little", "Systems Administrator", "New York", "1721", "2009/04/10", "$237,500" ],
+            [ "Bradley Greer", "Software Engineer", "London", "2558", "2012/10/13", "$132,000" ],
+            [ "Dai Rios", "Personnel Lead", "Edinburgh", "2290", "2012/09/26", "$217,500" ],
+            [ "Jenette Caldwell", "Development Lead", "New York", "1937", "2011/09/03", "$345,000" ],
+            [ "Yuri Berry", "Chief Marketing Officer (CMO)", "New York", "6154", "2009/06/25", "$675,000" ],
+            [ "Caesar Vance", "Pre-Sales Support", "New York", "8330", "2011/12/12", "$106,450" ],
+            [ "Doris Wilder", "Sales Assistant", "Sidney", "3023", "2010/09/20", "$85,600" ],
+            [ "Angelica Ramos", "Chief Executive Officer (CEO)", "London", "5797", "2009/10/09", "$1,200,000" ],
+            [ "Gavin Joyce", "Developer", "Edinburgh", "8822", "2010/12/22", "$92,575" ],
+            [ "Jennifer Chang", "Regional Director", "Singapore", "9239", "2010/11/14", "$357,650" ],
+            [ "Brenden Wagner", "Software Engineer", "San Francisco", "1314", "2011/06/07", "$206,850" ],
+            [ "Fiona Green", "Chief Operating Officer (COO)", "San Francisco", "2947", "2010/03/11", "$850,000" ],
+            [ "Shou Itou", "Regional Marketing", "Tokyo", "8899", "2011/08/14", "$163,000" ],
+            [ "Michelle House", "Integration Specialist", "Sidney", "2769", "2011/06/02", "$95,400" ],
+            [ "Suki Burks", "Developer", "London", "6832", "2009/10/22", "$114,500" ],
+            [ "Prescott Bartlett", "Technical Author", "London", "3606", "2011/05/07", "$145,000" ],
+            [ "Gavin Cortez", "Team Leader", "San Francisco", "2860", "2008/10/26", "$235,500" ],
+            [ "Martena Mccray", "Post-Sales support", "Edinburgh", "8240", "2011/03/09", "$324,050" ],
+            [ "Unity Butler", "Marketing Designer", "San Francisco", "5384", "2009/12/09", "$85,675" ]
+        ];
+
+        $('#example').DataTable( {
+            data: dataSet,
+            columns: [
+                { title: "Name" },
+                { title: "Position" },
+                { title: "Office" },
+                { title: "Extn." },
+                { title: "Start date" },
+                { title: "Salary" }
+            ]
+        } );
+  } );
+
+
+
+
+  } );
+
+
+
+
+
+        function loadDoc() {
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (xhttp.readyState == 4 && xhttp.status == 200) {
+              document.getElementById("demo").innerHTML = xhttp.responseText;
+            }
+          };
+          xhttp.open("GET", "test_ajax.txt", true);
+          xhttp.send();
+        }
+
+        $('.dropdown-toggle').dropdown();
+
+       $('#example').DataTable();
+// read more example
+       $('a.read_more').click(function(event){ /* find all a.read_more elements and bind the following code to them */
+         console.log("the read more event was triggered");
+       event.preventDefault(); /* prevent the a from changing the url */
+       $(this).parents('.item').find('.more_text').toggle(); /* show the .more_text span */
+// end readmore script
+   });
+
+   } );
+ </script>
+ <h2>AJAX</h2>
+
+<button type="button" onclick="loadDoc()">Request data</button>
+
+<p id="demo"></p>
+
+
+<script>
+
+        //trying to create JSON object
+        var myObj = '{"name" : "yes and", "difficulty" : "medium"}';
+
+        {"games":
+          [
+          "yes, and": {
+            "category": "verbal",
+            "difficulty": "medium",
+            "description": "'Yes, and' is a game where one player makes a statement, and the next player both agrees with what was said and adds something, otherwise known as 'heightening'. Subsequent players then continue the process."
+            }
+          }
+          {"personal relations":
+            {
+              "category": "acting",
+              "difficulty": "difficult",
+              "description": "One player creates a monologue in a character (can be based on a suggestion). The next player continues the story by delivering a monologue as a character related somehow to that portrayed by the previous actor."
+            }
+          ]
+
+        }';
+*/
+
+       $("#add_text2").click(function(){
+          console.log("the jquery button was clicked successfully");
+  //        $("#space").load("text/experiment_text")
+      //  $("#space").append("You have imported this text using append. congratulations!");
+         $("#space").load("text/experiment_text.txt");
+         //below ends the add_text2 funtion
+        });
+        //here begins add_text3
+      $("#add_text3").click(function(){
+        console.log("Don't worry--we know you pushed the json button.");
+          var myData = JSON.parse(myObj);
+          alert(myData.difficulty);
+
+          //end of add_text3
+          })
+      //below is the end of the document.ready function
+      });
+
+  //   $('#space').load("text/experiment_text.txt");
+  </script>
+
+
+    </body>
+</html>
