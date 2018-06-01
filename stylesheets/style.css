@@ -85,5 +85,12 @@ body {
 
 /* line 66, ../sass/style.scss */
 h1 {
-  color: white;
+  color: #786a6a;
+}
+
+/*my styles*/
+/* line 73, ../sass/style.scss */
+.spaced {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

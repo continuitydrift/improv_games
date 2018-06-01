@@ -1,146 +1,92 @@
-
 {
-	"data":[
-		{
-    "id": "1",
-    "name": "yes, and",
-    "type": "warm-up",
-    "difficulty": "4",
-    "description": "description will go here",
-    "players": null
-}, {
-    "id": "2",
-    "name": "personal relations",
-    "type": "acting",
-    "difficulty": "2",
-    "description": "One player start off giving a monologue as a character, and when they are done the next player takes the stage and delivers a monologue as a character RELATED to the one previously established.",
-    "players": null
-}, {
-    "id": "4",
-    "name": "not doing what i am doing",
-    "type": "warm-up",
-    "difficulty": "",
-    "description": "",
-    "players": null
-}, {
-    "id": "5",
-    "name": "three word scenes",
-    "type": "warm-up",
-    "difficulty": "",
-    "description": "",
-    "players": null
-}, {
-    "id": "6",
-    "name": "backdrop",
-    "type": "acting",
-    "difficulty": "medium",
-    "description": "Either before or intermittently during a scene, a player enters the stage and both points to and describes an element in the imaginary backdrop or landscape. \"There is a pond with a rope swing hanging here,\" an actor might say.",
-    "players": null
-}, {
-    "id": "7",
-    "name": "stright face",
-    "type": "warm-up",
-    "difficulty": "",
-    "description": "",
-    "players": null
-}, {
-    "id": "8",
-    "name": "sound and motion circle",
-    "type": "warm-up",
-    "difficulty": "",
-    "description": "",
-    "players": null
-}, {
-    "id": "9",
-    "name": "add-on",
-    "type": "warm-up",
-    "difficulty": "easy",
-    "description": "",
-    "players": null
-}, {
-    "id": "10",
-    "name": "hitchikers",
-    "type": "acting",
-    "difficulty": "difficult",
-    "description": "",
-    "players": null
-}, {
-    "id": "12",
-    "name": "symphony",
-    "type": "sound",
-    "difficulty": "",
-    "description": "",
-    "players": null
-}, {
-    "id": "13",
-    "name": "mime ball",
-    "type": "miming",
-    "difficulty": "easy",
-    "description": "",
-    "players": null
-}, {
-    "id": "14",
-    "name": "add to setting",
-    "type": "acting",
-    "difficulty": "",
-    "description": "",
-    "players": null
-}, {
-    "id": "15",
-    "name": "mirror",
-    "type": "physical",
-    "difficulty": "",
-    "description": "",
-    "players": null
-}, {
-    "id": "16",
-    "name": "contact improv",
-    "type": "physical",
-    "difficulty": "",
-    "description": "",
-    "players": null
-}, {
-    "id": "17",
-    "name": "secret motives",
-    "type": "acting",
-    "difficulty": "",
-    "description": "",
-    "players": null
-}, {
-    "id": "18",
-    "name": "Machine",
-    "type": "warm-up",
-    "difficulty": "easy",
-    "description": "One by one the players come up and form a component of an interlocking machine",
-    "players": "8"
-}, {
-    "id": "19",
-    "name": "contact improv",
-    "type": "warm-up",
-    "difficulty": "medium",
-    "description": "either have the players move while close, with no actual touching, working around the negative space of one another, or have them maitain one or two points of contact with other actors at all times",
-    "players": null
-}, {
-    "id": "20",
-    "name": "things in a place",
+  "data": [
+    {
+      "name": "Yes, and",
+      "type": "warm up",
+      "description": "One player says or does something, and the next actor reinforces, heightens, or extends what the previous player established."
+      },
+    {
+      "name": "Machine",
+      "type": "Warm-up",
+      "description": "One by one, players enter the stage and make a repetitive sound and motion, like a part of a machine. Other actors add parts to the collaborative contraption, which can increase speed until exploding."
+
+    },
+    {
+      "name": "Conducted Orchestra",
+      "type": "Warm-up",
+      "description": "A director/teacher or one of the players points to actors, who create a loop of sound or phrase. Subsequent actors should try to have their phrases match or complement the others. The conductor can then use hand gestures to control the volume of various parts, tell them to stop or begin, or increase the tempo."
+
+    },
+    {
+      "name": "Conducted Story",
+      "type": "verbal",
+      "description": "Similar to conducted orchestra, but with parts of a story told in turns. The game is most effective if the actors are forced to switch in the middle of thoughts and sentences. Genres can also be assigned to actors or called out for added fun and difficulty."
+    },
+    {
+      "name": "Change the Picture",
+      "type": "drawing",
+      "description": "change a drawing using as little as possible."
+    },
+    {
+    "name": "Straight Face",
     "type": "warm up",
-    "difficulty": "easy",
-    "description": "Players take turns saying things that might be in a particular place, determined by drawing randomly from previous suggestions or getting them from the audience (non-participating actors). If the place is \"classroom,\" then the two actors, or each subsequent actor if you want to play in a line or circle, would say \"blackboard\" or \"desk\" without repeating or passing a certain allotment of thinking time.",
-    "players": null
-}, {
-    "id": "21",
-    "name": "vampires",
-    "type": "narrative",
-    "difficulty": "difficult",
-    "description": "a game where players accuse one another of being vampires. ",
-    "players": null
-}, {
-    "id": "22",
-    "name": "things in a place",
-    "type": "warm up",
-    "difficulty": "easy",
-    "description": "A place is given and actors take turns saying what might be in that place.",
-    "players": null
-		}
-	]
+    "description": "The object of this game is to avoid breaking character.  The actors are allowed to say anything they want in the scene, but are not allowed to smile, laugh, or speak in any tone of voice but one of serious melodrama.  The scene is best started with a suggestion of a dramatic situation, such as two sisters meeting at their father’s grave, or two lovers proclaiming their feelings for the first time.  No matter what happens, the performers must act as if the scene is incredibly serious, while trying to force the other actor to break character.  You can play it where as soon as an actor drops his 'straight face' they are replaced by another, and the scene continues. A possible variation is to have the characters perform a straight face scene, but speaking in gibberish."
+    },
+    {
+      "name": "Moving",
+      "type": "physical",
+      "description": "The actors simply move around, walking at first, within a designated space. With kids, I would then call out a speed between one and 6, or tell them to 'freeze'. I would also use animals, or have them pretend to be walking on hot sand, or ice, or through thick mud. You could also call out emotions and have them express them through motion."
+    },
+    {
+      "name": "i'm not doing what i'm doing",
+      "type": "warm-up",
+      "description": "In a circle or line, the first person playing the game start miming an action, and the second asks what they are doing. The actor miming must respond by saying they are doing something obviously other than what their actions convey. The second player begins miming out the new action, and then lies when asked what they are doing  by a third person."
+    },
+    {
+      "name": "Subtext",
+      "type": "acting",
+      "description": "This is usually a game for four players. Two of them are the actual characters in the scene, and the other two actors translate the subtext, or hidden meaning, of the lines of dialogue. The game works best if the actors take turns, with player A, then the subtext for player A, followed by player B and their subtext. The subtext can be called from off stage, or the actors can run across the stage, subtitle style."
+    },
+    {
+      "name": "3 line scene",
+      "type": "acting",
+      "description": "The best way to play this game is to have one player initiate a scene through miming, joined by another who agrees with and adds to the reality of the pantomime. Once they have an idea where they are, one player initiates dialogue with a single line. Then the second player responds, and finally the first ends the scene with the third line. This can be thought of as add-on with an extra turn."
+    },
+    {
+      "name": "crime scene",
+      "type": "acting",
+      "description": "Two detectives arrive at a crime scene and begin to look for clues. When they find one they prompt the audience for a suggestion, as in 'Look! Over there in the corner! The criminal left a...' and either the audience or an off-stage actor fills in the blank. We used to play the game where the detectives would interpret the clues in the most non-obvious, convoluted way possible. After three or so clues are gathered (a witness could also be examined), the game can end in two ways: the detectives can come up with a final explanation of the crime, or the more challenging but satisfying option is to have other players re-enact the crime, accounting for all of the previous clues, either in the way the detectives described, or completely different."
+    },
+    {
+      "name": "comic book",
+      "type": "acting",
+      "description": "Players take poses in a frozen scene, as in a comic book page. Other actors provide the speech bubbles. They can either run on stage and make a speech bubble shape or some other sign with their hands and arms, or the actor in the scene can open their mouth to show when their dialoge is being spoken."
+    },
+    {
+      "name": "movement",
+      "type": "warm up, physical",
+      "description": "This is a catch-all for a number of exercises that start with all of the players walking around a space. A director/conductor can call out changes to the way everyone is moving, for example a number between one and ten for the speed they should move (0 to freeze). Alternately, you could call out the names of different animals, or emotions, or environments."
+    },
+    {
+      "name": "Slide Show",
+      "type": "Acting",
+      "description": "Two players act as if they are giving a slideshow or presentation on a vacation they have taken. At a signal (such as saying -click- while pretending to hold a remote) any number of players take the stage in a frozen position. The game works best if the players in the picture don't try to create an actual scene, but rather take bizarre or unusual positions for the narrators to justify."
+    },
+    {
+      "name": "Freeze and Justify",
+      "type": "Acting",
+      "description": "In the middle of a scene (the more physical, with broad gestures, the better) an actor will yell 'freeze' and those on stage will become as statues, which the new player will tag in order to take their place, assuming as close as possible the original position. The actors then begin a new scene, as different as possible from the previous, but starting from the same physical poses, 'justifying' them in a new way. Two people pulling a well-rope might become tango dancers, or a fist-fight might turn into two toddlers with ice cream cones."
+    },
+    {
+      "name": "Rant",
+      "type": "Warm-up",
+      "description": "A word or topic is given.  In a line, all actors start speaking at once, “ranting” about the suggestion.  They can say whatever they choose about the topic, as long as they pretend to feel very, very strongly.  After a while, one actor will step forward, signaling the others to stop.  The actor who stepped forward continues his rant while the others listen.  When he or she steps back in line everyone begins again, continuing their old rants or beginning something new inspired by the speech of the actor.  Another actor steps forward, and the process repeats."
+    },
+    {
+    "name": "Three Word Scenes",
+    "type": "Warm-up",
+    "description": "The idea of this game is to build a complete scene with only three words. It is a good exercise to learn to convey informations with the body and face as well as the voice. Actors should be encouraged to take long pauses between the words to give non-verbal clues as to what is going on, and also to consider what the most effective word will be.  If the performers have trouble making these scenes “slow” enough, you can give them a rule that they can only say the next word after you clap, which allows you to control the length of time in between the words. You can also extend the scenes beyond three words, to 5, 7, or unlimited, but still having them speak one word each in turn."
+
+    }
+  ]
 }
