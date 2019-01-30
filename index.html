@@ -1,36 +1,83 @@
 <!DOCTYPE html>
-<!--why can't I upload this?-->
+
 <html>
+
+<!-- \__/  \__/
+     /  \__/  \__
+     \__/
+     /  \__improv games
+
+-->
   <head>
+
+
+      <!--
+                 ___ ___
+           |\/| |__   |   /\
+           |  | |___  |  /~~\
+
+      -->
     <meta charset="utf-8">
     <title>Improv Games for Learning</title>
-    <meta title="author" content="Chad Hines">
+    <meta title="author" content="C A Hines">
     <!--continuity drift-->
     <meta name="viewport" content ="width=device-width, initial-scale=1">
-    <meta keywords="improv, games, teachers, learning, exercises, warm up">
-<!--jquery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <meta keywords="improv, esl, games, teachers, learning, exercises, warm up">
 
-<!--bootstrap and font awesome-->
-    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
-<!--JS-->
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!--my style sheet-->
-    <!--<link rel="stylesheet" href="stylesheets/style.css">-->
+    <!--
+                             __   __   __     __  ___
+           |  /\  \  /  /\  /__` /  ` |__) | |__)  |
+        \__/ /~~\  \/  /~~\ .__/ \__, |  \ | |     |
 
+               __   __        __   __   ___  __
+              /__` /  \ |  | |__) /  ` |__  /__`
+              .__/ \__/ \__/ |  \ \__, |___ .__/
 
 
+        -->
 
-    <!--text JSON file-->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+      <!--  <script src="/deploy/parallax.min.js"></script>-->
+      <!--switched to CDN 2/26/2018-->
+        <!-- Latest compiled and minified CSS -->
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <!--datatables-->
+    <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <!--
+
+     __   __   __
+    /  ` /__` /__`
+    \__, .__/ .__/
+
+     __  ___           ___
+    /__`  |  \ / |    |__
+    .__/  |   |  |___ |___
+
+     __        ___  ___ ___  __
+    /__` |__| |__  |__   |  /__`
+    .__/ |  | |___ |___  |  .__/
+
+
+    -->
+          <link rel="stylesheet" href="styles/new.css">
+          <link rel="stylesheet" href="styles/styles.css">
+
+          <link href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
+
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+
+    <!--JSON file-->
     <script type="text/javascript" src="js/data.json"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
-    <script>
-    
-    </script>
-    <link href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" rel="stylesheet">
-    <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+
   </head>
   <!--
   _               _
@@ -67,10 +114,6 @@
                 </li>
                 <li><a href="#table">Table</a>
                 </li>
-                <li><a href="#descriptions">Descriptions</a>
-                </li>
-                <li><a href="#donate">Donate</a>
-                </li>
                 <li><a href="#Stories">Stories</a>
                 </li>
                 <!--search bar-->
@@ -98,8 +141,13 @@
           </div>
           <div class="col-sm-4">
             <div class="jumbotron">
-              <h1 style="text-transform: uppercase">Yes, and...</h1>
-              <p>Improv Games for Learning</p>
+              <h1 style="text-transform: uppercase">Improv Games</h1>
+              <h2>Unscripted Learning</h2>
+              <!--
+But what about now?
+  I guess the point of this and other comments is that the world won't break by
+  tweaking the nose of the robot overlords
+              -->
             </div>
           </div>
           <div class="col-sm-4">
@@ -113,55 +161,90 @@
             <div class="col-lg-10 col-lg-offset-1">
                 <h2>About</h2>
                 <p>Designed to be easily accessible, this is a collection of improvisational games that I have found useful and entertaining. To read about my experiences learning and teaching through improvisation, join a mailing list to be notified when my new book, Long Form Learning: Games, Bridges, Incans, and Vampires is available, or watch excerpts from the text as they develop online.</p>
-                <p>I am also, consistent with the themes and methodologies of the book, trying to learn web design (specifically those to quesry databases and display tables) by doing a project I believe has value, since as a English teacher I often looked online for lesson plans and inspiration.</p>
                 <p>These games aren't mine. I wrote the descriptions of them you find below, but almost all of them will have come from another source originally, either a book or a person. My role here is a collector, and someone who assembles known elements into a new pattern.</p>
             </div>
         </div>
     </section>
-    <section id="table">
+    <section>
     <div class="fluid-container">
+      <table id="games" class="display" width="100%"></table>
+<!--
     <table id="games" class="display" cellspacing="0" width="100%">
         <thead>
             <tr>
-                <th>id</th>
                 <th>name</th>
-                <th>type</th>
-                <th>difficulty</th>
                 <th>description</th>
-                <th>players</th>
-                
+                <th>type</th>
             </tr>
         </thead>
         <tfoot>
             <tr>
-                <th>id</th>
                 <th>name</th>
-                <th>type</th>
-                <th>difficulty</th>
                 <th>description</th>
-                <th>players</th>
+                <th>type</th>
             </tr>
         </tfoot>
     </table>
+  -->
     </section>
     </div>
     <!--end container-->
     </div>
     <!-- end wrapper -->
-    <script type="text/javascript">
+  <!--  <script type="text/javascript">
       $(document).ready(function() {
           $('#games').DataTable( {
               "ajax": "data/games.txt",
               "columns": [
-            { "data": "id" },
             { "data": "name" },
             { "data": "description" },
-            { "data": "difficulty" },
-            { "data": "players" }
-            
+            { "data": "type" },
+
         ]
           } );
       } );
+    </script>-->
+
+  <script>
+
+  var dataSet= [
+    ["freeze and justify", "a fun game", "acting"],
+    ["181", "tell jokes", "verbal"]
+
+  ]
+    $(document).ready( function () {
+        $('#games').DataTable( {
+          data: dataSet,
+          columns: [
+            {title: "name"},
+            {title: "description"},
+            {tile: "type"}
+          ]
+        } );
+    } );
+</script>
+    <!--
+<script>
+  var data=[
+    [
+      "Good News, Bad News",
+      "A game where you take turns telling a story with ups and downs",
+      "narrative"
+    ],
+    [
+      "Personal Relations",
+      "At every turn a player delivers a monologue as someone related to characters already established",
+      "narrative"
+    ]
+  ]
+
+</script>
+<script>
+    $('#games').DataTable( {
+    data: data
+} );
     </script>
+-->
+
 </body>
 </html>

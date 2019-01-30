@@ -2,8 +2,9 @@
 A collection of improvisational games to be used in the classroom or in life.
 
 ##Things to Do Next
-1. Read through existing index
-2.
+1. check CDNs against continuity drift
+2. add datatables css and js
+3. Get a functional datatable to display with name, description, notes
 
 ##USER STORIES
 
